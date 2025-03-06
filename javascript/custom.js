@@ -6,8 +6,8 @@ require(["jquery"], function ($) {
           M.util.js_complete("theme_boost/loader");
         });
   
-        require(["moodle-theme_adaptable/init"], (module) => module.init());
-        require(["moodle-theme_adaptable/validateRegistration"], (module) =>
+        require(["theme_adaptable/init"], (module) => module.init());
+        require(["theme_adaptable/validateRegistration"], (module) =>
           module.validate());
       }
     });

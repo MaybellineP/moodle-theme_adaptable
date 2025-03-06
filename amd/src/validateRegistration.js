@@ -6,26 +6,27 @@ export const validate = () => {
     const keniaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_kenia');
     const healthWorkerOther = document.getElementById('fitem_id_profile_field_otherhealthworker');
 
-    // Function to toggle visibility of elements
-    const toggleVisibility = (element, condition) => {
-        if (element) {
-            element.style.display = condition ? "flex" : "none";
-            if (!condition) {
-                const inputField = element.querySelector("input, select, textarea");
-                if (inputField) inputField.value = "";
-            }
+    healthWorker.addEventListener("change", function() {
+        if (healthWorker.value === "Other") {
+            healthWorkerOther.style.display = "flex"; // Show the hidden field
+            healthWorkerOther.focus();
+        } else {
+            healthWorkerOther.style.display = "none"; // Hide the field if another option is selected
+            const healthWorkerOtherText = healthWorkerOther.querySelector("#id_profile_field_otherhealthworker");
+            healthWorkerOtherText.value = "";
         }
-    };
-
-    // Event listener for health worker type
-    healthWorker.addEventListener("change", () => {
-        toggleVisibility(healthWorkerOther, healthWorker.value === "Other");
     });
 
-    // Event listener for country selection
-    country.addEventListener("change", () => {
-        toggleVisibility(ethiopiaSubnationalLevels, country.value === "ET");
-        toggleVisibility(nigeriaSubnationalLevels, country.value === "NG");
-        toggleVisibility(keniaSubnationalLevels, country.value === "KE");
+    country.addEventListener("change", function() {
+        if (country.value === "NG") {
+            nigeriaSubnationalLevels.style.display = "flex"; // Show the hidden field
+            nigeriaSubnationalLevels.focus();
+        } else {
+            nigeriaSubnationalLevels.style.display = "none"; // Hide the field if another option is selected
+            const nigeriaSubnationalLevelsText = nigeriaSubnationalLevels.querySelector("#id_profile_field_subnationallevels_nigeria");
+            nigeriaSubnationalLevelsText.value = "";
+        }
     });
+
+    
 };
