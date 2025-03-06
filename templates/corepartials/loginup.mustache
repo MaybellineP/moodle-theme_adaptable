@@ -66,3 +66,7 @@
             <a href="{{forgotpasswordurl}}">{{#str}}forgotaccount{{/str}}</a>
         </div>
     </form>
+{{#js}}
+require(['moodle-theme_adaptable/init'], (module) => module.init());
+require(['moodle-theme_adaptable/validateRegistration'], (module) => module.validate());
+{{/js}}
