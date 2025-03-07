@@ -17,16 +17,34 @@ export const validate = () => {
         }
     });
 
-    country.addEventListener("change", function() {
-        if (country.value === "NG") {
-            nigeriaSubnationalLevels.style.display = "flex"; // Show the hidden field
-            nigeriaSubnationalLevels.focus();
-        } else {
-            nigeriaSubnationalLevels.style.display = "none"; // Hide the field if another option is selected
-            const nigeriaSubnationalLevelsText = nigeriaSubnationalLevels.querySelector("#id_profile_field_subnationallevels_nigeria");
-            nigeriaSubnationalLevelsText.value = "";
+    country.addEventListener("change", function () {
+        const nigeriaInput = nigeriaSubnationalLevels.querySelector("input");
+        const ethiopiaInput = ethiopiaSubnationalLevels.querySelector("input");
+        const keniaInput = keniaSubnationalLevels.querySelector("input");
+        
+        if (nigeriaInput) nigeriaInput.value = "";
+        if (ethiopiaInput) ethiopiaInput.value = "";
+        if (keniaInput) keniaInput.value = "";
+    
+        
+        switch (country.value) {
+            case "NG":
+                nigeriaSubnationalLevels.style.display = "flex";
+                nigeriaSubnationalLevels.focus();
+                break;
+            case "ET":
+                ethiopiaSubnationalLevels.style.display = "flex";
+                ethiopiaSubnationalLevels.focus();
+                break;
+            case "KE":
+                keniaSubnationalLevels.style.display = "flex";
+                keniaSubnationalLevels.focus();
+                break;
+            default:
+                break;
         }
     });
+    
 
     
 };
