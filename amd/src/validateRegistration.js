@@ -76,6 +76,13 @@ export const validate = () => {
                     break;
         
                 default:
+                    nigeriaSubnationalLevels.style.display = "none"; 
+                    if (nigeriaInput) nigeriaInput.value = "";
+                    ethiopiaSubnationalLevels.style.display = "none"; 
+                    if (ethiopiaInput) ethiopiaInput.value = "";
+                    keniaSubnationalLevels.style.display = "none"; 
+                    if (keniaInput) keniaInput.value = "";
+
                     break;
             }
     });
