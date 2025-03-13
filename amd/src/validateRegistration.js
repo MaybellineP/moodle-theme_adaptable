@@ -11,14 +11,29 @@ export const validate = () => {
     const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
 
     form.addEventListener('submit', function(event) {
-        /*const phoneNumber = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'BR');
-        
-        if(!phoneNumber || !phoneNumber.isValid()){
-            event.preventDefault();
-            alert('Digite um número de telefone válido.');
-            phoneInput.focus();
-            return false;
-        }*/
+        const phoneNumberNG = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'NG');
+        const phoneNumberET = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'ET');
+        const phoneNumberKE = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'KE');
+
+        switch (true) { 
+            case phoneNumberNG && phoneNumberNG.isValid():
+                console.log('Valid Nigerian number');
+                break;
+
+            case phoneNumberET && phoneNumberET.isValid():
+                console.log('Valid Ethiopian number');
+                break;
+
+            case phoneNumberKE && phoneNumberKE.isValid():
+                console.log('Valid Kenyan number');
+                break;
+
+            default:
+                event.preventDefault();
+                alert('Enter a valid phone number.');
+                phoneInput.focus();
+                return false;
+        }
 
         if(!EighteenYearsPassed(dayInput.value,monthInput.value,yearInput.value)){
             event.preventDefault();
