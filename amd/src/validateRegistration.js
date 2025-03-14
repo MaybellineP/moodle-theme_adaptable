@@ -1,6 +1,8 @@
 export const validate = () => {
     const form = document.querySelector('.mform.full-width-labels, .mform');
     const phoneInput = document.getElementById('id_profile_field_phonenumber');
+    const usernameInput = document.getElementById('id_username');
+    const emailInput = document.getElementById('id_email')
     const country = document.getElementById('id_country');
     const healthWorker = document.getElementById('id_profile_field_typeofhealthworker');
     const ethiopiaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_ethiopia');
@@ -42,6 +44,24 @@ export const validate = () => {
             return false;
         }
     })
+
+    
+    emailInput.addEventListener("input", function () {
+        const emailValue = emailInput.value;
+
+        if (emailValue.includes("@")) { // Verifica que haya un @ en el correo
+            usernameInput.value = emailValue.split("@")[0];
+        }
+    });
+
+    emailInput.addEventListener("blur", function () {
+        if (emailInput.value.includes("@")) { 
+            usernameInput.readOnly = true; // Bloquea el campo después de escribir el email
+        } else {
+            alert('You must enter a valid email.');
+            emailInput.focus();
+        }
+    });
 
     healthWorker.addEventListener("change", function() {
         if (healthWorker.value === "Other") {
