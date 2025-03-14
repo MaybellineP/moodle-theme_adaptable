@@ -1,5 +1,6 @@
 export const validate = () => {
     const form = document.querySelector('.mform.full-width-labels, .mform');
+    const phoneInput = document.getElementById('id_profile_field_phonenumber');
     const country = document.getElementById('id_country');
     const healthWorker = document.getElementById('id_profile_field_typeofhealthworker');
     const ethiopiaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_ethiopia');
