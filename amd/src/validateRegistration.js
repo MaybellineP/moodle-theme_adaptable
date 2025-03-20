@@ -50,7 +50,7 @@ export const validate = () => {
         const emailValue = emailInput.value;
 
         if (emailValue.includes("@")) { // Verifica que haya un @ en el correo
-            usernameInput.value = emailValue.split("@")[0];
+            usernameInput.value = emailValue;
         }
     });
 
