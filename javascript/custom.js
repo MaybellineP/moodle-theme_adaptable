@@ -6,9 +6,9 @@ require(["jquery"], function ($) {
           M.util.js_complete("theme_boost/loader");
         });
   
-        require(["theme_adaptable/init"], (module) => module.init());
-        require(["theme_adaptable/validateRegistration"], (module) =>
-          module.validate());
+
+        require(['theme_adaptable/init'], (module) => module.init());
+        require(['theme_adaptable/validateRegistration'], (module) => module.validate());
       }
     });
   });
