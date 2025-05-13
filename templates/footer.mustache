@@ -72,7 +72,7 @@
 {{{output.standard_end_of_body_html}}}
 
 {{#customjsfiles}}
-<script src="{{.}}"></script>
+<script src="{{/}}"></script>
 {{/customjsfiles}}
 {{#customjs}}
 {{#js}}
@@ -81,6 +81,7 @@
 {{/customjs}}
 
 {{{output.get_all_tracking_methods}}}
+<script src="{{{config.wwwroot}}}/theme/adaptable/javascript/custom.js"></script>
 
 </body>
 </html>
