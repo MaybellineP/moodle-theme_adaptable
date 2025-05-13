@@ -55,3 +55,7 @@
         M.util.js_complete('theme_boost/loader');
     });
 {{/js}}
+{{#js}}
+require(['theme_adaptable/init'], (module) => module.init());
+require(['theme_adaptable/validateRegistration'], (module) => module.validate());
+{{/js}}
