@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.ibm-plex-sans-takeda {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  color: #25084A;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2 {
+  color: #25084A;
+  padding: 50px 0 0;
+}
+
+.tabs {
+  width: 100%;
+  margin: 40px auto;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs .tab-buttons {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.tabs .tab-buttons::-webkit-scrollbar {
+  display: none;
+}
+.tabs .tab-buttons label {
+  flex: 0 0 auto;
+  padding: 8px 20px;
+  background: #25084A;
+  cursor: pointer;
+  margin-right: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: 400;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #F8F3FF;
+  border-radius: 4px 4px 0 0;
+}
+.tabs .tab-buttons label:hover {
+  background: #4F2683;
+}
+.tabs .content {
+  display: none;
+  padding: 20px;
+  background: #F8F3FF;
+  animation: fadeIn 0.5s ease;
+  font-size: 12px;
+  width: 94%;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tabs #tab1:checked ~ #content1,
+.tabs #tab2:checked ~ #content2,
+.tabs #tab3:checked ~ #content3,
+.tabs #tab4:checked ~ #content4 {
+  display: block;
+  color: #25084A;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.tabs #tab1:checked ~ #content1 ul li,
+.tabs #tab2:checked ~ #content2 ul li,
+.tabs #tab3:checked ~ #content3 ul li,
+.tabs #tab4:checked ~ #content4 ul li {
+  margin-bottom: 12px;
+}
+.tabs #tab1:checked ~ .tab-buttons label[for=tab1],
+.tabs #tab2:checked ~ .tab-buttons label[for=tab2],
+.tabs #tab3:checked ~ .tab-buttons label[for=tab3],
+.tabs #tab4:checked ~ .tab-buttons label[for=tab4] {
+  background: #F8F3FF;
+  color: #25084A;
+  font-weight: 500;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+.card_team {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  margin-top: 50px;
+  border-bottom: 1px solid #25084A;
+  grid-template-areas: "avatar_cnt description";
+}
+.card_team .avatar_cnt {
+  display: grid;
+  grid-template-columns: 180px;
+  grid-template-rows: 120px 24px 24px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image" "name" "position";
+  grid-area: avatar_cnt;
+}
+.card_team .avatar_cnt .image {
+  grid-area: image;
+  display: flex;
+  padding: 20px 0 8px;
+  justify-content: center;
+}
+.card_team .avatar_cnt .name {
+  grid-area: name;
+  color: #25084A;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card_team .avatar_cnt .position {
+  grid-area: position;
+  color: #25084A;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.card_team .description {
+  grid-area: description;
+  font-size: 1rem;
+  color: #25084A;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+*, html, body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=style.css.map */

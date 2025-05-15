@@ -1,0 +1,135 @@
+.form-custom_contact {
+  display: grid;
+  grid-template-columns: 247px 1fr;
+  grid-template-rows: auto;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+  margin: 50px 0 30px;
+  grid-template-areas: "lft rgt";
+
+  .lft {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    gap: 18px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo_cnt";
+
+    grid-area: lft;
+
+    .logo_cnt {
+      justify-self: center;
+      grid-area: logo_cnt;
+    }
+  }
+
+  .rgt {
+    grid-area: rgt;
+    .formcontactus {
+      fieldset {
+        border: none;
+        .form-group {
+          margin-bottom: 12px;
+          label {
+            color: $secondary2;
+            font-size: 12px;
+          }
+
+          .contact-logo {
+          }
+
+          .custom_input {
+            width: 90%;
+            border: 1px solid rgb(34, 34, 34);
+            background-color: $inputs-bg;
+            line-height: 24px;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-secondary {
+    background-color: $secondary2;
+    color: $primary2;
+    width: 180px;
+    float: right;
+    margin-right: 8%;
+    height: 32px;
+
+    &:hover {
+      cursor: pointer;
+      color: $secondary2;
+      background-color: $secondary3;
+      border-color: $secondary3;
+    }
+  }
+
+  @include respond-to(sm, max) {
+    grid-template-columns: 100%;
+    gap: 50px;
+    grid-template-areas:
+      "rgt"
+      "lft";
+  }
+
+}
+
+.findus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0 8px;
+  border-bottom: 1px solid $secondary2;
+  
+  h3 {
+    font-weight: 500;
+    line-height: 0.9rem;
+    color: $secondary2;
+  }
+}
+
+.bttm_cnt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 8px;
+
+  h4 {
+    font-weight: 500;
+    color: $secondary2;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: $secondary2;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .psi {
+    max-width: 160px;
+    .social_icons {
+      padding: 8px 0;
+      @include flexbox(row, flex-start, flex-start, wrap, 4px);
+      a {
+        .icon-link {
+          width: 36px;
+          height: 36px;
+          border-radius: 18px;
+          background-color: $secondary2;
+          border-radius: 18px;
+          &:hover {
+            background-color: $secondary3;
+          }
+        }
+      }
+    }
+  }
+}

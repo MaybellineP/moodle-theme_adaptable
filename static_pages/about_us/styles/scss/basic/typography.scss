@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+.ibm-plex-sans-takeda {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+    color: $secondary2;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2 {
+    color: $secondary2;
+    padding: 50px 0 0;
+}

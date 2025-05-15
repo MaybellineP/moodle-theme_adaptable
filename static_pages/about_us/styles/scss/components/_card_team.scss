@@ -1,0 +1,50 @@
+.card_team {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  margin-top: 50px;
+  border-bottom: 1px solid $secondary2;
+  grid-template-areas: "avatar_cnt description";
+
+  .avatar_cnt {
+    display: grid;
+    grid-template-columns: 180px;
+    grid-template-rows: 120px 24px 24px;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "image"
+      "name"
+      "position";
+    grid-area: avatar_cnt;
+    .image {
+      grid-area: image;
+      display: flex;
+      padding: 20px 0 8px;
+      justify-content: center;
+    }
+
+    .name {
+      grid-area: name;
+      color: $secondary2;
+      font-size: 1rem;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .position {
+      grid-area: position;
+      color: $secondary2;
+      font-size: 0.7rem;
+      text-align: center;
+    }
+  }
+  .description {
+    grid-area: description;
+    font-size: 1rem;
+    color: $secondary2;
+  }
+}

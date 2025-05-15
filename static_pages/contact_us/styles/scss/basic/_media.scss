@@ -1,0 +1,56 @@
+// mixins/_media.scss
+
+// Breakpoints base (los podés ajustar a tu gusto)
+$breakpoints: (
+  xs: 480px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1440px
+);
+
+// Mixin genérico para media queries
+@mixin respond-to($breakpoint, $type: min) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size == null {
+    $size: $breakpoint; // permite valores custom como "850px"
+  }
+
+  @media (#{$type}-width: #{$size}) {
+    @content;
+  }
+}
+
+
+/*
+Ejemplos de uso
+
+Mostrar algo a partir de md(768px en adelante):
+.box {
+  font-size: 1rem;
+
+  @include respond-to(md) {
+    font-size: 1.25rem;
+  }
+}
+Ocultar en pantallas pequeñas (menor a 600px):
+.menu {
+  display: block;
+
+  @include respond-to(sm, max) {
+    display: none;
+  }
+}
+Consulta de medios con un valor personalizado:
+.container {
+  padding: 2rem;
+
+  @include respond-to(900px) {
+    padding: 4rem;
+  }
+}
+
+
+*/

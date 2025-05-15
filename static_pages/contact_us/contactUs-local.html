@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Contact Us</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='styles/css/style.css'>
+  <script src="https://kit.fontawesome.com/680f79053d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Contact Us</h1>
+    <p>
+      We would love to hear from you! Whether you have a question about our work
+      or
+      want to partner with us,
+      feel free to reach out via the contact form below or get in touch at
+      <a href="mailto:pharmalink@psi.org">pharmalink@psi.org</a>.
+    </p>
+    <h2>Contact Form</h2>
+    <div class="form-custom_contact">
+      <div class="lft">
+        <div class="logo_cnt">
+          <img src="images/logo-parma-contactus.png" alt="Betty Abera" class="contact-logo" width="150">
+        </div>
+    
+      </div>
+      <div class="rgt">
+        <form action="https://takedalearning.psidigital.org/local/contact/index.php" method="post"
+          class="cf formcontactus">
+          <fieldset>
+            <div class="form-group">
+              <label for="nameuser" class="d-block">Your name </label><img src="images/exclamation.svg" alt="required"
+                class="contact-logo">
+              <input id="nameuser" name="Name" type="text" maxlength="45" pattern="[A-zÀ-ž]([A-zÀ-ž\s]){2,}"
+                title="Minimum 3 letters/spaces." required="required" class="custom_input">
+            </div>
+            <div class="form-group">
+              <label for="emailuser" class="d-block">Email address </label><img src="images/exclamation.svg"
+                alt="required" class="contact-logo">
+              <input id="emailuser" name="Email" type="email" maxlength="60" required="required" class="custom_input">
+            </div>
+
+            <div class="form-group">
+              <label for="country" class="d-block">Country </label><img src="images/exclamation.svg" alt="required"
+                class="contact-logo">
+              <input id="country" name="country" type="text" maxlength="60" required="required" class="custom_input">
+            </div>
+
+            <div class="form-group">
+              <label for="phonenumber" class="d-block">Phone number </label><img src="images/exclamation.svg"
+                alt="required" class="contact-logo">
+              <input id="phonenumber" name="Phone Number" type="text" required="required" class="custom_input"
+                class="custom_input">
+            </div>
+
+            <div class="form-group">
+              <label for="jobtitle" class="d-block">You Job Title </label><img src="images/exclamation.svg"
+                alt="required" class="contact-logo">
+              <input id="jobtitle" name="Job Title" type="text" required="required" class="custom_input">
+            </div>
+
+            <div class="form-group">
+              <label for="companyname" class="d-block">Your Company Name </label><img src="images/exclamation.svg"
+                alt="required" class="contact-logo">
+              <input id="companyname" name="Company Name" type="text" maxlength="80" minlength="5"
+                title="Minimum 5 characters." required="required" class="custom_input">
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="d-block">Your Message </label><img src="images/exclamation.svg" alt="required"
+                class="contact-logo">
+              <textarea id="message" name="message" rows="5" cols="58" minlength="5" title="Minimum 5 characters."
+                required="required" class="custom_input"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="emailConsent">
+                <input type="checkbox" id="emailConsent"
+                  name="Consent to receiving information from PharmaLink by email" value="yes">
+                I consent to receiving information from PharmaLink by email.
+              </label>
+            </div>
+
+            <!-- More settings-->
+            <input type="hidden" id="recipient" name="recipient" value="tech support">
+            <input type="hidden" id="sesskey" name="sesskey">
+            <script>
+              document.getElementById('sesskey').value = M.cfg.sesskey;
+            </script>
+          </fieldset>
+          <div>
+            <input type="submit" class="btn btn-secondary" name="submit" id="submit" value="Send">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="findus">
+      <h3>Where to Find Us</h3>
+    </div>
+    <div class="bttm_cnt">
+      <div class="psi">
+        <div>
+          <h4>Population Services International</h4>
+        </div>
+        <div>
+          <p>1120 19th St NW
+            Suite 600
+            Washington, DC 20036
+            United States</p>
+        </div>
+        <div class="social_icons">
+          <a href="#">
+            <div class="icon-link">
+              <img src="images/Instagram.png" alt="Instagram-logo" class="Instagram-logo" width="36">
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon-link">
+              <img src="images/Facebook.png" alt="Facebook-logo" class="Facebook-logo" width="36">
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon-link">
+              <img src="images/LinkedIn.png" alt="LinkedIn-logo" class="LinkedIn-logo" width="36">
+            </div>
+          </a>
+          <a href="#">
+            <div class="icon-link">
+              <img src="images/YouTube.png" alt="YouTube-logo" class="YouTube-logo" width="36">
+            </div>
+          </a>
+        </div>       
+      </div>
+      <div class="psi">
+        <div>
+          <h4>PSI Ethiopia</h4>
+        </div>
+        <div>
+          <p>Bole Sub City, Kebelle 03/07
+            Namibia Street
+            PO Box 468 Code 1250
+            Addis Ababa, Ethiopia</p>
+        </div>
+      </div>
+      <div class="psi">
+        <div>
+          <h4>PSI Nigeria</h4>
+        </div>
+        <div>
+          <p>No. 8 Patrick O. Bokkor Crescent
+            Jabi District
+            Abuja, Nigeria</p>
+        </div>
+      </div>
+      <div class="psi">
+        <div>
+          <h4>PSI Global Service Hub (Kenya)</h4>
+        </div>
+        <div>
+          <p>28 Whitefield Place
+            School Lane, Westlands
+            PO Box 14355-00800
+            Nairobi, Kenya</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
