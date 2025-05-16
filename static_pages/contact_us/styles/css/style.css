@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.ibm-plex-sans-takeda {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  color: #25084A;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2 {
+  color: #25084A;
+  padding: 50px 0 0;
+}
+
+/*
+Ejemplos de uso
+
+Mostrar algo a partir de md(768px en adelante):
+.box {
+  font-size: 1rem;
+
+  @include respond-to(md) {
+    font-size: 1.25rem;
+  }
+}
+Ocultar en pantallas pequeñas (menor a 600px):
+.menu {
+  display: block;
+
+  @include respond-to(sm, max) {
+    display: none;
+  }
+}
+Consulta de medios con un valor personalizado:
+.container {
+  padding: 2rem;
+
+  @include respond-to(900px) {
+    padding: 4rem;
+  }
+}
+
+
+*/
+/*
+ * USE
+ .section {
+  @include flex-center;
+}
+
+.sidebar {
+  @include flex-column;
+  @include flex-gap(1rem);
+}
+
+.footer {
+  @include flex-between;
+}
+
+*/
+.form-custom_contact {
+  display: grid;
+  grid-template-columns: 247px 1fr;
+  grid-template-rows: auto;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+  margin: 50px 0 30px;
+  grid-template-areas: "lft rgt";
+}
+.form-custom_contact .lft {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  gap: 18px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo_cnt";
+  grid-area: lft;
+}
+.form-custom_contact .lft .logo_cnt {
+  justify-self: center;
+  grid-area: logo_cnt;
+}
+.form-custom_contact .rgt {
+  grid-area: rgt;
+}
+.form-custom_contact .rgt .formcontactus fieldset {
+  border: none;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group {
+  margin-bottom: 12px;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group label {
+  color: #25084A;
+  font-size: 12px;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group .custom_input {
+  width: 90%;
+  border: 1px solid rgb(34, 34, 34);
+  background-color: #f8f7f7;
+  line-height: 24px;
+  padding: 0 8px;
+}
+.form-custom_contact .btn-secondary {
+  background-color: #25084A;
+  color: #F8F3FF;
+  width: 180px;
+  float: right;
+  margin-right: 8%;
+  height: 32px;
+}
+.form-custom_contact .btn-secondary:hover {
+  cursor: pointer;
+  color: #25084A;
+  background-color: #FA9F42;
+  border-color: #FA9F42;
+}
+@media (max-width: 600px) {
+  .form-custom_contact {
+    grid-template-columns: 100%;
+    gap: 50px;
+    grid-template-areas: "rgt" "lft";
+  }
+}
+
+.findus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0 8px;
+  border-bottom: 1px solid #25084A;
+}
+.findus h3 {
+  font-weight: 500;
+  line-height: 0.9rem;
+  color: #25084A;
+}
+
+.bttm_cnt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 8px;
+}
+.bttm_cnt h4 {
+  font-weight: 500;
+  color: #25084A;
+  padding: 0;
+  margin: 0;
+}
+.bttm_cnt p {
+  font-size: 0.8rem;
+  color: #25084A;
+  padding: 0;
+  margin: 0;
+}
+.bttm_cnt .psi {
+  max-width: 160px;
+}
+.bttm_cnt .psi .social_icons {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.bttm_cnt .psi .social_icons a .icon-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #25084A;
+  border-radius: 18px;
+}
+.bttm_cnt .psi .social_icons a .icon-link:hover {
+  background-color: #FA9F42;
+}
+
+.card_team {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  margin-top: 50px;
+  border-bottom: 1px solid #25084A;
+  grid-template-areas: "avatar_cnt description";
+}
+.card_team .avatar_cnt {
+  display: grid;
+  grid-template-columns: 180px;
+  grid-template-rows: 120px 24px 24px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image" "name" "position";
+  grid-area: avatar_cnt;
+}
+.card_team .avatar_cnt .image {
+  grid-area: image;
+  display: flex;
+  padding: 20px 0 8px;
+  justify-content: center;
+}
+.card_team .avatar_cnt .name {
+  grid-area: name;
+  color: #25084A;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card_team .avatar_cnt .position {
+  grid-area: position;
+  color: #25084A;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.card_team .description {
+  grid-area: description;
+  font-size: 1rem;
+  color: #25084A;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+*, html, body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px 100px 16px;
+}
+.wrapper p a {
+  color: #FA9F42;
+}
+
+/*# sourceMappingURL=style.css.map */

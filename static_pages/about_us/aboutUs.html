@@ -1,0 +1,296 @@
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.ibm-plex-sans-takeda {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  color: #25084A;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2 {
+  color: #25084A;
+  padding: 50px 0 0;
+}
+
+.tabs {
+  width: 100%;
+  margin: 40px auto;
+}
+.tabs input[type=radio] {
+  display: none;
+}
+.tabs .tab-buttons {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.tabs .tab-buttons::-webkit-scrollbar {
+  display: none;
+}
+.tabs .tab-buttons label {
+  flex: 0 0 auto;
+  padding: 8px 20px;
+  background: #25084A;
+  cursor: pointer;
+  margin-right: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  font-weight: 400;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #F8F3FF;
+  border-radius: 4px 4px 0 0;
+}
+.tabs .tab-buttons label:hover {
+  background: #4F2683;
+}
+.tabs .content {
+  display: none;
+  padding: 20px;
+  background: #F8F3FF;
+  animation: fadeIn 0.5s ease;
+  font-size: 12px;
+  width: 94%;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.tabs #tab1:checked ~ #content1,
+.tabs #tab2:checked ~ #content2,
+.tabs #tab3:checked ~ #content3,
+.tabs #tab4:checked ~ #content4 {
+  display: block;
+  color: #25084A;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.tabs #tab1:checked ~ #content1 ul li,
+.tabs #tab2:checked ~ #content2 ul li,
+.tabs #tab3:checked ~ #content3 ul li,
+.tabs #tab4:checked ~ #content4 ul li {
+  margin-bottom: 12px;
+}
+.tabs #tab1:checked ~ .tab-buttons label[for=tab1],
+.tabs #tab2:checked ~ .tab-buttons label[for=tab2],
+.tabs #tab3:checked ~ .tab-buttons label[for=tab3],
+.tabs #tab4:checked ~ .tab-buttons label[for=tab4] {
+  background: #F8F3FF;
+  color: #25084A;
+  font-weight: 500;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+.card_team {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  margin-top: 50px;
+  border-bottom: 1px solid #25084A;
+  grid-template-areas: "avatar_cnt description";
+}
+.card_team .avatar_cnt {
+  display: grid;
+  grid-template-columns: 180px;
+  grid-template-rows: 120px 24px 24px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image" "name" "position";
+  grid-area: avatar_cnt;
+}
+.card_team .avatar_cnt .image {
+  grid-area: image;
+  display: flex;
+  padding: 20px 0 8px;
+  justify-content: center;
+}
+.card_team .avatar_cnt .name {
+  grid-area: name;
+  color: #25084A;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card_team .avatar_cnt .position {
+  grid-area: position;
+  color: #25084A;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.card_team .description {
+  grid-area: description;
+  font-size: 1rem;
+  color: #25084A;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+*, html, body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+</style>
+<div class="wrapper">
+  <h1>About Us</h1>
+  <div class="tabs">
+    <input type="radio" id="tab1" name="tab" checked>
+    <input type="radio" id="tab2" name="tab">
+    <input type="radio" id="tab3" name="tab">
+    <input type="radio" id="tab4" name="tab">
+    <input type="radio" id="tab5" name="tab">
+
+    <div class="tab-buttons">
+      <label for="tab1">Our Mission</label>
+      <label for="tab2">Our Purpose</label>
+      <label for="tab3">How We Make a Difference</label>
+    </div>
+
+    <div class="content" id="content1">
+      At PSI, we believe that quality healthcare should be accessible to everyone. PharmaLink bridges gaps in the
+      healthcare system by integrating pharmacy services with primary care, ensuring that communities receive the
+      support they need, when they need it.
+    </div>
+    <div class="content" id="content2">
+      Millions of people struggle with fragmented healthcare services, including immunization, making it difficult to
+      access essential medications and vaccines, consultations, and preventative care. PharmaLink was created to connect
+      these missing links, brining innovative, patient-centered care to the forefront.
+    </div>
+    <div class="content" id="content3">
+      <ul class="lista-alfabetica">
+        <li>Seamless Integration: We connect pharmacies, healthcare providers, and partners in a unified system backed
+          by data</li>
+        <li>Convenience: Patients access essential health services, including vaccination, from nearby pharmacy</li>
+        <li>Improved Health Outcomes: Timely interventions and better coordination lead to healthier communities</li>
+      </ul>
+    </div>
+  </div>
+  <h2>Our Team</h2>
+  <div class="card_team">
+    <div class="avatar_cnt">
+      <div class="image">
+        <img src="/theme/adaptable/pix/takeda-team/BettyAbera.png" alt="Betty Abera" class="team-photo">
+      </div>
+      <div class="name">Betty Abera</div>
+      <div class="position">Project Director II, Global</div>
+    </div>
+    <div class="description">
+      <p>Betty Abera is a global health specialist and registered pharmacist with over twenty years of experience in
+        expanding access to medicines and vaccines through innovative healthcare delivery models and strategic
+        partnerships.</p>
+      <p>Betty is the Global Project Director for PharmaLink at PSI Washington, DC, where she leads the introduction of
+        Pharmacy-Based Immunization Delivery in Ethiopia, Nigeria, and Kenya through effective stakeholder engagement,
+        policy advocacy, and resource mobilization. Betty designed a comprehensive framework for concept to delivery of
+        pharmacy-based immunization, focusing on expanding the enabling environment, strengthening pharmacist capacity,
+        developing a digital ecosystem for eLearning, community and data management, fostering public trust and demand
+        generation, creating a sustainable financial model, and generating evidence to support scalability. Betty also
+        collaborates with the Viya Health (Social Business) team to drive product pipeline innovation.</p>
+      <p>Prior to her current role, Betty led social business marketing and product pipeline innovation at PSI
+        Washington, DC, supporting local teams in over 20 countries across Africa, Asia and Latin America. She managed
+        pharmaceutical marketing for GSK in East Africa and oversaw operations for Rite Aid pharmacy chains in Seattle,
+        Washington, while also dedicating a decade to direct patient care. Betty earned her Bachelor of Science degrees
+        in Chemistry and Pharmacy from the University of Albera, Canada and holds an MBA in International Business from
+        the University of Greenwich, UK.</p>
+    </div>
+  </div>
+  <div class="card_team">
+    <div class="avatar_cnt">
+      <div class="image">
+        <img src="/theme/adaptable/pix/takeda-team/HilaryKinka.png" alt="Betty Abera" class="team-photo">
+      </div>
+      <div class="name">Hilary Kinka</div>
+      <div class="position">Deputy Project Director, Global</div>
+    </div>
+    <div class="description">
+      <p>Hilary Kinka is a global health leader with over ten years of experience managing multi-country projects,
+        building relationships with strategic partners, and providing technical assistance in health systems
+        strengthening, private sector engagement, workforce capacity building, and health financing at the global and
+        country level.</p>
+      <p>Hilary is the Deputy Project Director for the Pharmacy-Based Immunization Delivery project and also serves as
+        the Private Sector Engagement Technical Advisor on the Health Systems Accelerator team at PSI.</p>
+      <p>Hilary has five years of experience living and working in East Africa, during which time she worked very
+        closely with private sector health actors to expand their service offerings, introduced digital health
+        solutions, participated in health financing schemes, and grew their health businesses. Hilary has also worked
+        with governments to improve governance of the private health sector, and she is a champion of digital health
+        solutions. Based out of British Columbia, Canada, Hilary holds a Master’s degree in International Relations and
+        International Economics from the Johns Hopkins School of Advanced International Studies (SAIS) in Washington,
+        DC.</p>
+    </div>
+  </div>
+  <div class="card_team">
+    <div class="avatar_cnt">
+      <div class="image">
+        <img src="/theme/adaptable/pix/takeda-team/BeleteAyalneh.png" alt="Betty Abera" class="team-photo">
+      </div>
+      <div class="name">Belete Ayalneh</div>
+      <div class="position">Program Manager III, Ethiopia</div>
+    </div>
+    <div class="description">
+      <p>Belete is a senior pharmacist with over 15 years of experience in pharmacy practice and public health. Belete
+        specializes in pharmacy services, program management, and policy advocacy with a diverse portfolio of experience
+        as a public health program advisor, practitioner, academician, and researcher.</p>
+    </div>
+  </div>
+  <div class="card_team">
+    <div class="avatar_cnt">
+      <div class="image">
+        <img src="/theme/adaptable/pix/takeda-team/AdebayoAdebisi.png" alt="Betty Abera" class="team-photo">
+      </div>
+      <div class="name">Adebayo Adebisi</div>
+      <div class="position">Senior Program Manager, Nigeria</div>
+    </div>
+    <div class="description">
+      <p>Adebayo is a medical doctor and a development expert with over 15 years of experience in development programs,
+        including immunization, HIV/AIDS, TB, antimicrobial resistance, infection prevention and control and Malaria. He
+        specializes in project management, private sector engagement, and health system strengthening. Adebayo embraces
+        change as a fundamental necessity for organizational growth.</p>
+    </div>
+  </div>
+  <div class="card_team">
+    <div class="avatar_cnt">
+      <div class="image">
+        <img src="/theme/adaptable/pix/takeda-team/FlorenceWachira.png" alt="Betty Abera" class="team-photo">
+      </div>
+      <div class="name">Florence Wachira</div>
+      <div class="position">Program Manager, Kenya</div>
+    </div>
+    <div class="description">
+      <p>Florence is a medical doctor with a Master of Science in Clinical Psychology, bringing over a decade of
+        clinical experience across both public and private sector, along with more than six years in public health and
+        project management. Florence is passionate about a holistic approach to health, with a strong focus one health
+        equity, effective communication and education, and leadership development</p>
+    </div>
+  </div>
+</div>

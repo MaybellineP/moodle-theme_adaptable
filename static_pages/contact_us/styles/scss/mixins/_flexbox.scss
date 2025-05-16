@@ -1,0 +1,100 @@
+// mixins/_flexbox.scss
+
+// Mixin principal de Flexbox
+@mixin flexbox(
+  $direction: row,
+  $justify: flex-start,
+  $align: stretch,
+  $wrap: nowrap,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+// Direcciones
+@mixin flex-row {
+  @include flexbox(row);
+}
+
+@mixin flex-row-reverse {
+  @include flexbox(row-reverse);
+}
+
+@mixin flex-column {
+  @include flexbox(column);
+}
+
+@mixin flex-column-reverse {
+  @include flexbox(column-reverse);
+}
+
+// Centrado y distribuciones comunes
+@mixin flex-center {
+  @include flexbox(row, center, center);
+}
+
+@mixin flex-center-column {
+  @include flexbox(column, center, center);
+}
+
+@mixin flex-between {
+  @include flexbox(row, space-between, center);
+}
+
+@mixin flex-around {
+  @include flexbox(row, space-around, center);
+}
+
+@mixin flex-evenly {
+  @include flexbox(row, space-evenly, center);
+}
+
+@mixin flex-between-column {
+  @include flexbox(column, space-between, center);
+}
+
+// Variantes con wrap
+@mixin flex-wrap {
+  @include flexbox(row, flex-start, stretch, wrap);
+}
+
+@mixin flex-nowrap {
+  @include flexbox(row, flex-start, stretch, nowrap);
+}
+
+// Full size y centrado
+@mixin flex-full-center {
+  width: 100%;
+  height: 100%;
+  @include flex-center;
+}
+
+// Solo gap
+@mixin flex-gap($gap) {
+  gap: $gap;
+}
+
+/*
+ * USE
+ .section {
+  @include flex-center;
+}
+
+.sidebar {
+  @include flex-column;
+  @include flex-gap(1rem);
+}
+
+.footer {
+  @include flex-between;
+}
+
+*/

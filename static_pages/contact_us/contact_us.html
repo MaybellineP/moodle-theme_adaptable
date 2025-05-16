@@ -1,0 +1,418 @@
+<style>
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+.ibm-plex-sans-takeda {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+h1 {
+  color: #25084A;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2 {
+  color: #25084A;
+  padding: 50px 0 0;
+}
+
+/*
+Ejemplos de uso
+
+Mostrar algo a partir de md(768px en adelante):
+.box {
+  font-size: 1rem;
+
+  @include respond-to(md) {
+    font-size: 1.25rem;
+  }
+}
+Ocultar en pantallas pequeñas (menor a 600px):
+.menu {
+  display: block;
+
+  @include respond-to(sm, max) {
+    display: none;
+  }
+}
+Consulta de medios con un valor personalizado:
+.container {
+  padding: 2rem;
+
+  @include respond-to(900px) {
+    padding: 4rem;
+  }
+}
+
+
+*/
+/*
+ * USE
+ .section {
+  @include flex-center;
+}
+
+.sidebar {
+  @include flex-column;
+  @include flex-gap(1rem);
+}
+
+.footer {
+  @include flex-between;
+}
+
+*/
+.form-custom_contact {
+  display: grid;
+  grid-template-columns: 247px 1fr;
+  grid-template-rows: auto;
+  gap: 0px 50px;
+  grid-auto-flow: row;
+  margin: 50px 0 30px;
+  grid-template-areas: "lft rgt";
+}
+.form-custom_contact .lft {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr;
+  gap: 18px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "logo_cnt";
+  grid-area: lft;
+}
+.form-custom_contact .lft .logo_cnt {
+  justify-self: center;
+  grid-area: logo_cnt;
+}
+.form-custom_contact .rgt {
+  grid-area: rgt;
+}
+.form-custom_contact .rgt .formcontactus fieldset {
+  border: none;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group {
+  margin-bottom: 12px;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group label {
+  color: #25084A;
+  font-size: 12px;
+}
+.form-custom_contact .rgt .formcontactus fieldset .form-group .custom_input {
+  width: 90%;
+  border: 1px solid rgb(34, 34, 34);
+  background-color: #f8f7f7;
+  line-height: 24px;
+  padding: 0 8px;
+}
+.form-custom_contact .btn-secondary {
+  background-color: #25084A;
+  color: #F8F3FF;
+  width: 180px;
+  float: right;
+  margin-right: 8%;
+  height: 32px;
+}
+.form-custom_contact .btn-secondary:hover {
+  cursor: pointer;
+  color: #25084A;
+  background-color: #FA9F42;
+  border-color: #FA9F42;
+}
+@media (max-width: 600px) {
+  .form-custom_contact {
+    grid-template-columns: 100%;
+    gap: 50px;
+    grid-template-areas: "rgt" "lft";
+  }
+}
+
+.findus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0 8px;
+  border-bottom: 1px solid #25084A;
+}
+.findus h3 {
+  font-weight: 500;
+  line-height: 0.9rem;
+  color: #25084A;
+}
+
+.bttm_cnt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px 8px;
+}
+.bttm_cnt h4 {
+  font-weight: 500;
+  color: #25084A;
+  padding: 0;
+  margin: 0;
+}
+.bttm_cnt p {
+  font-size: 0.8rem;
+  color: #25084A;
+  padding: 0;
+  margin: 0;
+}
+.bttm_cnt .psi {
+  max-width: 160px;
+}
+.bttm_cnt .psi .social_icons {
+  padding: 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.bttm_cnt .psi .social_icons a .icon-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #25084A;
+  border-radius: 18px;
+}
+.bttm_cnt .psi .social_icons a .icon-link:hover {
+  background-color: #FA9F42;
+}
+
+.card_team {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+  gap: 8px 12px;
+  grid-auto-flow: row;
+  margin-top: 50px;
+  border-bottom: 1px solid #25084A;
+  grid-template-areas: "avatar_cnt description";
+}
+.card_team .avatar_cnt {
+  display: grid;
+  grid-template-columns: 180px;
+  grid-template-rows: 120px 24px 24px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "image" "name" "position";
+  grid-area: avatar_cnt;
+}
+.card_team .avatar_cnt .image {
+  grid-area: image;
+  display: flex;
+  padding: 20px 0 8px;
+  justify-content: center;
+}
+.card_team .avatar_cnt .name {
+  grid-area: name;
+  color: #25084A;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+}
+.card_team .avatar_cnt .position {
+  grid-area: position;
+  color: #25084A;
+  font-size: 0.7rem;
+  text-align: center;
+}
+.card_team .description {
+  grid-area: description;
+  font-size: 1rem;
+  color: #25084A;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+*, html, body {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 16px 100px 16px;
+}
+.wrapper p a {
+  color: #FA9F42;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+</style>
+<div class="wrapper">
+  <h1>Contact Us</h1>
+  <p>
+    We would love to hear from you! Whether you have a question about our work
+    or
+    want to partner with us,
+    feel free to reach out via the contact form below or get in touch at
+    <a href="mailto:pharmalink@psi.org">pharmalink@psi.org</a>.
+  </p>
+  <h2>Contact Form</h2>
+  <div class="form-custom_contact">
+    <div class="lft">
+      <div class="logo_cnt">
+        <img src="images/logo-parma-contactus.png" alt="Betty Abera" class="contact-logo" width="150">
+      </div>
+  
+    </div>
+    <div class="rgt">
+      <form action="https://takedalearning.psidigital.org/local/contact/index.php" method="post"
+        class="cf formcontactus">
+        <fieldset>
+          <div class="form-group">
+            <label for="nameuser" class="d-block">Your name </label><img src="images/exclamation.svg" alt="required"
+              class="contact-logo">
+            <input id="nameuser" name="Name" type="text" maxlength="45" pattern="[A-zÀ-ž]([A-zÀ-ž\s]){2,}"
+              title="Minimum 3 letters/spaces." required="required" class="custom_input">
+          </div>
+          <div class="form-group">
+            <label for="emailuser" class="d-block">Email address </label><img src="images/exclamation.svg"
+              alt="required" class="contact-logo">
+            <input id="emailuser" name="Email" type="email" maxlength="60" required="required" class="custom_input">
+          </div>
+
+          <div class="form-group">
+            <label for="country" class="d-block">Country </label><img src="images/exclamation.svg" alt="required"
+              class="contact-logo">
+            <input id="country" name="country" type="text" maxlength="60" required="required" class="custom_input">
+          </div>
+
+          <div class="form-group">
+            <label for="phonenumber" class="d-block">Phone number </label><img src="images/exclamation.svg"
+              alt="required" class="contact-logo">
+            <input id="phonenumber" name="Phone Number" type="text" required="required" class="custom_input"
+              class="custom_input">
+          </div>
+
+          <div class="form-group">
+            <label for="jobtitle" class="d-block">You Job Title </label><img src="images/exclamation.svg"
+              alt="required" class="contact-logo">
+            <input id="jobtitle" name="Job Title" type="text" required="required" class="custom_input">
+          </div>
+
+          <div class="form-group">
+            <label for="companyname" class="d-block">Your Company Name </label><img src="images/exclamation.svg"
+              alt="required" class="contact-logo">
+            <input id="companyname" name="Company Name" type="text" maxlength="80" minlength="5"
+              title="Minimum 5 characters." required="required" class="custom_input">
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="d-block">Your Message </label><img src="images/exclamation.svg" alt="required"
+              class="contact-logo">
+            <textarea id="message" name="message" rows="5" cols="58" minlength="5" title="Minimum 5 characters."
+              required="required" class="custom_input"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="emailConsent">
+              <input type="checkbox" id="emailConsent"
+                name="Consent to receiving information from PharmaLink by email" value="yes">
+              I consent to receiving information from PharmaLink by email.
+            </label>
+          </div>
+
+          <!-- More settings-->
+          <input type="hidden" id="recipient" name="recipient" value="tech support">
+          <input type="hidden" id="sesskey" name="sesskey">
+          <script>
+            document.getElementById('sesskey').value = M.cfg.sesskey;
+          </script>
+        </fieldset>
+        <div>
+          <input type="submit" class="btn btn-secondary" name="submit" id="submit" value="Send">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="findus">
+    <h3>Where to Find Us</h3>
+  </div>
+  <div class="bttm_cnt">
+    <div class="psi">
+      <div>
+        <h4>Population Services International</h4>
+      </div>
+      <div>
+        <p>1120 19th St NW
+          Suite 600
+          Washington, DC 20036
+          United States</p>
+      </div>
+      <div class="social_icons">
+        <a href="#">
+          <div class="icon-link">
+            <img src="images/Instagram.png" alt="Instagram-logo" class="Instagram-logo" width="36">
+          </div>
+        </a>
+        <a href="#">
+          <div class="icon-link">
+            <img src="images/Facebook.png" alt="Facebook-logo" class="Facebook-logo" width="36">
+          </div>
+        </a>
+        <a href="#">
+          <div class="icon-link">
+            <img src="images/LinkedIn.png" alt="LinkedIn-logo" class="LinkedIn-logo" width="36">
+          </div>
+        </a>
+        <a href="#">
+          <div class="icon-link">
+            <img src="images/YouTube.png" alt="YouTube-logo" class="YouTube-logo" width="36">
+          </div>
+        </a>
+      </div>       
+    </div>
+    <div class="psi">
+      <div>
+        <h4>PSI Ethiopia</h4>
+      </div>
+      <div>
+        <p>Bole Sub City, Kebelle 03/07
+          Namibia Street
+          PO Box 468 Code 1250
+          Addis Ababa, Ethiopia</p>
+      </div>
+    </div>
+    <div class="psi">
+      <div>
+        <h4>PSI Nigeria</h4>
+      </div>
+      <div>
+        <p>No. 8 Patrick O. Bokkor Crescent
+          Jabi District
+          Abuja, Nigeria</p>
+      </div>
+    </div>
+    <div class="psi">
+      <div>
+        <h4>PSI Global Service Hub (Kenya)</h4>
+      </div>
+      <div>
+        <p>28 Whitefield Place
+          School Lane, Westlands
+          PO Box 14355-00800
+          Nairobi, Kenya</p>
+      </div>
+    </div>
+  </div>
+</div>

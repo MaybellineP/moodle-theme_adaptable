@@ -1,0 +1,324 @@
+@import "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;700&display=swap";
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h1 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h3 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h4 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h5 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+h6 {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+p {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+div {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+span {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+a {
+  &:not([class*="fa-"]) {
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+}
+li {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+td {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+th {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+input {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+select {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+textarea {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.d-lg-inline-block  {
+  display: flex !important;
+  align-self: end !important;
+  padding-bottom: 8px !important;
+}
+#logo {
+  max-width: 56px !important;
+}
+#sitetitle {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  gap: 8px;
+}
+.social-icons {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+  padding: 0 16px;
+
+  div {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      background: #fa9f42;
+    }
+
+    a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .instagram-icon {
+    background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_Instagram_h.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_Instagram.png");
+    }
+  }
+
+  .facebook-icon {
+    background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_Facebook_h.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_Facebook.png");
+    }
+  }
+
+  .linkedin-icon {
+    background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_LinkedIn_h.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_LinkedIn.png");
+    }
+  }
+
+  .youTube-icon {
+    background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_YouTube_h.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease-in-out;
+
+    &:hover {
+      background-image: url("https://takedalearning.psidigital.org/theme/adaptable/pix/takeda_images/social_YouTube.png");
+    }
+  }
+}
+
+footer {
+  .row {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+  }
+}
+
+.m_footer {
+  div {
+    cursor: pointer;
+    text-align: center;
+    a {
+      color: #fff !important;
+      text-align: center !important;
+
+      &:hover {
+        color: #fa9f42 !important;
+      }
+    }
+  }
+}
+
+.welcome-banner {
+  background-color: fefefe;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.welcome-text {
+  h1 {
+    color: #2e005d;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    color: #3a3a3a;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+}
+.welcome-button {
+  display: flex;
+  justify-content: flex-end;
+  .btn-primary {
+    background-color: #5b1e8d;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #451970;
+    }
+  }
+}
+.info-blocks-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 20px;
+}
+.info-block-card {
+  background-color: #f9f5ff;
+  padding: 1.5rem;
+  flex: 1 1 30%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  min-width: 250px;
+  max-width: 32%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
+.info-block-img {
+  margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+}
+.offer-text {
+  h2 {
+    color: #2e005d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+.info-block-lgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+}
+.info-block-logo {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+.testimonials-text {
+  h2 {
+    color: #2e005d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+.testimonials-blocks-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 20px;
+}
+.testimonials-block-card {
+  background-color: #09a5b6;
+  padding: 1.5rem;
+  flex: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  color: #fff;
+  min-width: 250px;
+  max-width: 32%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+body.pagelayout-frontpage {
+  &:not(:has(.usermenu)) {
+    #frontpage-available-course-list {
+      display: none !important;
+    }
+    .course-content {
+      display: none !important;
+    }
+  }
+  &:has(.usermenu) {
+    #frontpage-available-course-list {
+      display: block !important;
+    }
+    .course-content {
+      display: block !important;
+    }
+  }
+}
+.container {
+  max-width: 1280px !important;
+  margin: 0 auto !important;
+}
+#region-main {
+  padding: 0 !important;
+}
+#page {
+  .course-content {
+    ul {
+      li.section.main {
+        border: none !important;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .d-lg-inline-block {
+    display: flex !important;
+    align-self: end !important;
+    //padding-bottom: 8px !important;
+  }
+}
