@@ -1,6 +1,8 @@
 export const validate = () => {
     const form = document.querySelector('.mform.full-width-labels, .mform');
-    if (!form) return;
+    if (!form) {
+        return;
+    }
 
     const phoneInput = document.getElementById('id_profile_field_phonenumber');
     const usernameInput = document.getElementById('id_username');
@@ -15,30 +17,28 @@ export const validate = () => {
     const monthInput = document.getElementById('id_profile_field_dataofbirth_month');
     const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
 
-    console.log("validate() called");
+    // console.log("validate() called");
 
     form.addEventListener('submit', function(event) {
-        // Validar solo si existe phoneInput
         if (phoneInput) {
             const phoneNumberNG = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'NG');
             const phoneNumberET = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'ET');
             const phoneNumberKE = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'KE');
 
-            switch (true) { 
-                case phoneNumberNG && phoneNumberNG.isValid():
-                case phoneNumberET && phoneNumberET.isValid():
-                case phoneNumberKE && phoneNumberKE.isValid():
-                    console.log("Teléfono válido");
-                    break;
-                default:
-                    event.preventDefault();
-                    alert('Enter a valid phone number.');
-                    phoneInput.focus();
-                    return false;
+            if (
+                (phoneNumberNG && phoneNumberNG.isValid()) ||
+                (phoneNumberET && phoneNumberET.isValid()) ||
+                (phoneNumberKE && phoneNumberKE.isValid())
+            ) {
+                // console.log("Teléfono válido");
+            } else {
+                event.preventDefault();
+                alert('Enter a valid phone number.');
+                phoneInput.focus();
+                return false;
             }
         }
 
-        // Validar edad si los campos existen
         if (dayInput && monthInput && yearInput) {
             if (!EighteenYearsPassed(dayInput.value, monthInput.value, yearInput.value)) {
                 event.preventDefault();
@@ -92,36 +92,55 @@ export const validate = () => {
                     nigeriaSubnationalLevels?.focus();
 
                     ethiopiaSubnationalLevels?.style.setProperty("display", "none");
-                    if (ethiopiaInput) ethiopiaInput.value = "";
+                    if (ethiopiaInput) {
+                        ethiopiaInput.value = "";
+                    }
 
                     keniaSubnationalLevels?.style.setProperty("display", "none");
-                    if (keniaInput) keniaInput.value = "";
+                    if (keniaInput) {
+                        keniaInput.value = "";
+                    }
                     break;
+
                 case "ET":
                     ethiopiaSubnationalLevels?.style.setProperty("display", "flex");
                     ethiopiaSubnationalLevels?.focus();
 
                     nigeriaSubnationalLevels?.style.setProperty("display", "none");
-                    if (nigeriaInput) nigeriaInput.value = "";
+                    if (nigeriaInput) {
+                        nigeriaInput.value = "";
+                    }
 
                     keniaSubnationalLevels?.style.setProperty("display", "none");
-                    if (keniaInput) keniaInput.value = "";
+                    if (keniaInput) {
+                        keniaInput.value = "";
+                    }
                     break;
+
                 case "KE":
                     keniaSubnationalLevels?.style.setProperty("display", "flex");
                     keniaSubnationalLevels?.focus();
 
                     nigeriaSubnationalLevels?.style.setProperty("display", "none");
-                    if (nigeriaInput) nigeriaInput.value = "";
+                    if (nigeriaInput) {
+                        nigeriaInput.value = "";
+                    }
 
                     ethiopiaSubnationalLevels?.style.setProperty("display", "none");
-                    if (ethiopiaInput) ethiopiaInput.value = "";
+                    if (ethiopiaInput) {
+                        ethiopiaInput.value = "";
+                    }
                     break;
+
                 default:
                     [nigeriaSubnationalLevels, ethiopiaSubnationalLevels, keniaSubnationalLevels].forEach(item => {
-                        item?.style.setProperty("display", "none");
-                        const input = item?.querySelector("input");
-                        if (input) input.value = "";
+                        if (item) {
+                            item.style.setProperty("display", "none");
+                            const input = item.querySelector("input");
+                            if (input) {
+                                input.value = "";
+                            }
+                        }
                     });
                     break;
             }
