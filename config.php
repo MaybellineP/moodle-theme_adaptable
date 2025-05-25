@@ -253,4 +253,4 @@ $THEME->haseditswitch = false;
 $THEME->usescourseindex = true;
 $THEME->iconsystem = '\\theme_adaptable\\output\\icon_system_fontawesome';
 $THEME->addblockposition = BLOCK_ADDBLOCK_POSITION_FLATNAV;
-$THEME->javascripts_footer = array('custom');
+$THEME->javascripts_footer = ['custom'];
