@@ -49,14 +49,14 @@ export const validate = () => {
     emailInput.addEventListener("input", function () {
         const emailValue = emailInput.value;
 
-        if (emailValue.includes("@")) { // Verifica que haya un @ en el correo
+        if (emailValue.includes("@")) {
             usernameInput.value = emailValue;
         }
     });
 
     emailInput.addEventListener("blur", function () {
         if (emailInput.value.includes("@")) { 
-            usernameInput.readOnly = true; // Bloquea el campo después de escribir el email
+            usernameInput.readOnly = true;
         } else {
             alert('You must enter a valid email.');
             emailInput.focus();
@@ -65,10 +65,10 @@ export const validate = () => {
 
     healthWorker.addEventListener("change", function() {
         if (healthWorker.value === "Other") {
-            healthWorkerOther.style.display = "flex"; // Show the hidden field
+            healthWorkerOther.style.display = "flex";
             healthWorkerOther.focus();
         } else {
-            healthWorkerOther.style.display = "none"; // Hide the field if another option is selected
+            healthWorkerOther.style.display = "none";
             const healthWorkerOtherText = healthWorkerOther.querySelector("#id_profile_field_otherhealthworker");
             healthWorkerOtherText.value = "";
         }
