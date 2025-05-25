@@ -33,7 +33,7 @@ defined('MOODLE_INTERNAL') || die;
 $plugin->component = 'theme_adaptable';
 
 // Adaptable version date (YYYYMMDDrr where rr is the release number).
-$plugin->version = 2024100525;
+$plugin->version = 2024100526;
 
 $plugin->requires = 2024100700.00; // 4.5 (Build: 20241007).
 
