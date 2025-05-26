@@ -5,6 +5,7 @@ export const validate = () => {
     const emailInput = document.getElementById('id_email')
     const country = document.getElementById('id_country');
     const healthWorker = document.getElementById('id_profile_field_typeofhealthworker');
+    const primarypharmacy = document.getElementById('id_profile_field_primarypharmacy');
     const ethiopiaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_ethiopia');
     const nigeriaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_nigeria');
     const keniaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_kenia');
@@ -12,6 +13,7 @@ export const validate = () => {
     const dayInput = document.getElementById('id_profile_field_dataofbirth_day');
     const monthInput = document.getElementById('id_profile_field_dataofbirth_month');
     const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
+    const otherprimarypharmacy = document.getElementById('fitem_id_profile_field_otherprimarypharmacy');
 
     form.addEventListener('submit', function(event) {
         const phoneNumberNG = libphonenumber.parsePhoneNumberFromString(phoneInput.value, 'NG');
@@ -71,6 +73,17 @@ export const validate = () => {
             healthWorkerOther.style.display = "none"; // Hide the field if another option is selected
             const healthWorkerOtherText = healthWorkerOther.querySelector("#id_profile_field_otherhealthworker");
             healthWorkerOtherText.value = "";
+        }
+    });
+
+    primarypharmacy.addEventListener("change", function() {
+        if (primarypharmacy.value === "Other") {
+            otherprimarypharmacy.style.display = "flex";
+            otherprimarypharmacy.focus();
+        } else {
+            otherprimarypharmacy.style.display = "none";
+            const otherprimarypharmacyText = otherprimarypharmacy.querySelector("#id_profile_field_otherprimarypharmacy");
+            otherprimarypharmacyText.value = "";
         }
     });
 

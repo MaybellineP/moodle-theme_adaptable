@@ -5,4 +5,5 @@ export const init = () => {
         document.getElementById("fitem_id_profile_field_subnationallevels_nigeria").style.display = "none";
         document.getElementById("fitem_id_profile_field_subnationallevels_kenia").style.display = "none";
         document.getElementById("fitem_id_profile_field_otherhealthworker").style.display = "none";
+        document.getElementById("fitem_id_profile_field_otherprimarypharmacy").style.display = "none";
 };
