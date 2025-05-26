@@ -5,10 +5,12 @@ export const validate = () => {
     const emailInput = document.getElementById('id_email')
     const country = document.getElementById('id_country');
     const healthWorker = document.getElementById('id_profile_field_typeofhealthworker');
+    const primarypharmacy = document.getElementById('id_profile_field_primarypharmacy');
     const ethiopiaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_ethiopia');
     const nigeriaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_nigeria');
     const keniaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnationallevels_kenia');
     const healthWorkerOther = document.getElementById('fitem_id_profile_field_otherhealthworker');
+    const otherprimarypharmacy = document.getElementById('fitem_id_profile_field_otherprimarypharmacy');
     const dayInput = document.getElementById('id_profile_field_dataofbirth_day');
     const monthInput = document.getElementById('id_profile_field_dataofbirth_month');
     const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
@@ -74,6 +76,17 @@ export const validate = () => {
         }
     });
 
+    primarypharmacy.addEventListener("change", function() {
+        if (primarypharmacy.value === "Other") {
+            otherprimarypharmacy.style.display = "flex";
+            otherprimarypharmacy.focus();
+        } else {
+            otherprimarypharmacy.style.display = "none";
+            const otherprimarypharmacyText = otherprimarypharmacy.querySelector("#id_profile_field_otherprimarypharmacy");
+            otherprimarypharmacyText.value = "";
+        }
+    });
+
     country.addEventListener("change", function () {
 
             const nigeriaInput = nigeriaSubnationalLevels.querySelector("input");
@@ -123,6 +136,7 @@ export const validate = () => {
             }
     });
         
+    
    
 };
 
