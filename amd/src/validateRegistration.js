@@ -71,7 +71,7 @@ export const validate = () => {
             healthWorkerOther.focus();
         } else {
             healthWorkerOther.style.display = "none"; // Hide the field if another option is selected
-            const healthWorkerOtherText = healthWorkerOther.querySelector("#id_profile_field_otherhealthworker");
+            const healthWorkerOtherText = healthWorkerOther.querySelector("#id_profile_field_otherprofession");
             healthWorkerOtherText.value = "";
         }
     });
