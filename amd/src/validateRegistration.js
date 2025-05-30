@@ -10,9 +10,9 @@ export const validate = () => {
     const nigeriaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnational1');
     const keniaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnational3');
     const healthWorkerOther = document.getElementById('fitem_id_profile_field_otherprofession');
-    const dayInput = document.getElementById('id_profile_field_dataofbirth_day');
-    const monthInput = document.getElementById('id_profile_field_dataofbirth_month');
-    const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
+    const dayInput = document.getElementById('id_profile_field_dateofbirth_day');
+    const monthInput = document.getElementById('id_profile_field_dateofbirth_month');
+    const yearInput = document.getElementById('id_profile_field_dateofbirth_year');
     const otherprimarypharmacy = document.getElementById('fitem_id_profile_field_otherprimarypharmacy');
 
     form.addEventListener('submit', function(event) {
