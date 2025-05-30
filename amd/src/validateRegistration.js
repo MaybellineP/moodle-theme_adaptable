@@ -4,12 +4,12 @@ export const validate = () => {
     const usernameInput = document.getElementById('id_username');
     const emailInput = document.getElementById('id_email')
     const country = document.getElementById('id_country');
-    const healthWorker = document.getElementById('id_profile_field_typeofhealthworker');
+    const healthWorker = document.getElementById('id_profile_field_profession');
     const primarypharmacy = document.getElementById('id_profile_field_primarypharmacy');
     const ethiopiaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnational2');
     const nigeriaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnational1');
     const keniaSubnationalLevels = document.getElementById('fitem_id_profile_field_subnational3');
-    const healthWorkerOther = document.getElementById('fitem_id_profile_field_otherhealthworker');
+    const healthWorkerOther = document.getElementById('fitem_id_profile_field_otherprofession');
     const dayInput = document.getElementById('id_profile_field_dataofbirth_day');
     const monthInput = document.getElementById('id_profile_field_dataofbirth_month');
     const yearInput = document.getElementById('id_profile_field_dataofbirth_year');
